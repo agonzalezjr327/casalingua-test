@@ -1,0 +1,4 @@
+flask
+flask-cors
+transformers  # if you're loading a model later
+torch
