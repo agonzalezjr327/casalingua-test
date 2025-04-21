@@ -9,7 +9,7 @@ class HFModel:
             "text2text-generation",
             model=self.model,
             tokenizer=self.tokenizer,
-            return_full_text=False
+            # return_full_text=False
         )
         self.max_tokens = max_tokens
 
@@ -21,6 +21,6 @@ class HFModel:
 
 # Usage
 legal_text = "The party of the first part hereby agrees to indemnify and hold harmless the party of the second part in any circumstance in which they may be held liable for damages..."
-model = HFModel(model_id="t5-base")  # Use T5 instead of distilgpt2
+model = HFModel(model_id="t5-base") 
 simplified_text = model.generate(legal_text)
 print(simplified_text)
